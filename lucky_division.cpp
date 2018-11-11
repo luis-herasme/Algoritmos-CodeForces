@@ -6,15 +6,22 @@ int main()
 {
     string name;
     cin >> name;
-    map<char, bool> nombre;
+    bool lucky = true;
+
     for (int i = 0; i < name.size(); i++)
-    {
-        if (!nombre[name[i]])
-            nombre[name[i]] = true;
-    }
-    if (nombre.size() % 2)
-        cout << "IGNORE HIM!";
+        if ((name[i] != '4') && (name[i] != '7'))
+            lucky = false;
+
+    if (lucky)
+        cout << "YES";
     else
-        cout << "CHAT WITH HER!";
+    {
+        int n = atoi(name.c_str());
+        if (!(n % 7) || !(n % 4))
+            cout << "YES";
+        else
+            cout << "NO";
+    }
+
     return 0;
 }
