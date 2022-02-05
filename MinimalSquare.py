@@ -11,12 +11,10 @@ for i in range(t):
     tests[i] = input_list_numbers()
 
 for test in tests:
-    [x, y, n] = test
-    k = n
-    for i in range(n + 1):
-        if k % x < y:
-            k = k - k % x 
-        elif k % x == y:
-            print(k)
-            break
-        k = k - 1
+    small_side = min(test)
+    big_side = max(test)
+
+    if 2 * small_side >= big_side:
+        print((2*small_side)**2)
+    else:
+        print(big_side**2)
