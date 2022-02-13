@@ -21,9 +21,9 @@ def bs(arr, x):
     while l <= r:
         m = l + (r - l) // 2
 
-        if arr[m] < x:
+        if arr[m] <= x:
             l = m + 1   
-        else:
+        elif arr[m] > x:
             r = m - 1
 
     if not answer:        
