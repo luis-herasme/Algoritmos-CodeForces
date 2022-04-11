@@ -42,6 +42,4 @@ content = content.split('\n')
 for i in range(len(content)):
     content[i] = int(content[i])
 
-# print(content)
-
 print(sort_and_count(content))
