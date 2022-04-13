@@ -15,8 +15,8 @@ def count_split_inv(B, C):
     for k in range(len(D)):
 
         if B[i] < C[j]:
-                D[k] = B[i]
-                i = i + 1
+            D[k] = B[i]
+            i = i + 1
 
         elif B[i] > C[j]:
             D[k] = C[j]
